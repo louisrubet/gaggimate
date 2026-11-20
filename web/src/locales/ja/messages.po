@@ -1741,6 +1741,10 @@ msgstr "スマートグラインドを有効にする"
 msgid "Enable standby display"
 msgstr "スタンバイ画面を有効にする"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "有効"
@@ -2285,6 +2289,10 @@ msgstr "グラインド目標"
 #: src/pages/Home/utils.js
 msgid "Grinding"
 msgstr "グラインド中"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
+msgstr ""
 
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
@@ -5018,6 +5026,10 @@ msgstr "最新のショットを最大100件表示しています。フィルタ
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "抽出中にスケールの接続が一時的に途切れたときに表示されます。この場合、後でスケールが再接続しても、その抽出では停止判定に重量が使われません。"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
+msgstr ""
+
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
 msgstr "滴下や制御の遅延を考慮して、流量に基づき早めにプロセスを停止します。"
@@ -5147,6 +5159,10 @@ msgstr "スタンバイ時の輝度（0-16）"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "スタンバイ輝度のタイムアウト"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"

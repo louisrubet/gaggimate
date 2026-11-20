@@ -1741,6 +1741,10 @@ msgstr "Activar Smart Grind"
 msgid "Enable standby display"
 msgstr "Activar pantalla en reposo"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "Activado"
@@ -2285,6 +2289,10 @@ msgstr "Objetivo de molienda"
 #: src/pages/Home/utils.js
 msgid "Grinding"
 msgstr "Moliendo"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
+msgstr ""
 
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
@@ -5009,6 +5017,7 @@ msgstr "Muestra los paneles de la columna de control como tarjetas separadas o a
 #: src/pages/Settings/PatchNotes.jsx
 msgid "showing the newest {0}"
 msgstr "se muestran los {0} más recientes"
+
 #: src/pages/Statistics/components/StatisticsShotCompareSection.jsx
 msgid "Showing up to 100 latest shots. Refine with filters."
 msgstr "Se muestran hasta las 100 extracciones más recientes. Afina con los filtros."
@@ -5016,6 +5025,10 @@ msgstr "Se muestran hasta las 100 extracciones más recientes. Afina con los fil
 #: src/pages/ShotAnalyzer/components/analysisTable/analysisTableModel.js
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "Se muestra cuando la báscula pierde brevemente la conexión durante la extracción. En ese caso, el peso se ignora para la detección de parada en esa extracción, aunque la báscula se reconecte después."
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
@@ -5146,6 +5159,10 @@ msgstr "Brillo en reposo (0-16)"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "Tiempo para brillo de reposo"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"
