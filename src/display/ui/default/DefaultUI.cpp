@@ -371,7 +371,7 @@ void DefaultUI::loop() {
         lastRender = now;
         applyTheme();
         standbyHaiku.setDisplay(static_cast<StandbyHaikuDisplay>(standbyHaikuDisplay.load()));
-        standbyHaiku.tick(currentScreen == SCREEN_ID_STANDBY_SCREEN, now);
+        standbyHaiku.tick(currentScreen == SCREEN_ID_STANDBY_SCREEN);
         if (controller->isErrorState()) {
             changeScreen(SCREEN_ID_STANDBY_SCREEN);
         }

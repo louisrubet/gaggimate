@@ -54,29 +54,28 @@ void StandbyHaiku::setDisplay(StandbyHaikuDisplay newDisplay) {
     if (logo != nullptr)
         lv_obj_add_flag(logo, LV_OBJ_FLAG_HIDDEN);
     lv_obj_clear_flag(box, LV_OBJ_FLAG_HIDDEN);
-    wasOnStandby = false; // next tick on the standby screen shows a haiku
-    shownOfTheDayVersion = 0;
+    shown = false; // next tick on the standby screen shows a haiku
+    shownOfTheDay = false;
     triedOfTheDayVersion = 0;
 }
 
-void StandbyHaiku::tick(bool onStandby, unsigned long now) {
-    const bool entering = onStandby && !wasOnStandby;
-    wasOnStandby = onStandby;
+void StandbyHaiku::tick(bool onStandby) {
     if (!onStandby || display == StandbyHaikuDisplay::Off)
         return;
+    const long day = HaikuOfTheDay::today();
     if (display == StandbyHaikuDisplay::OfTheDay) {
-        // A new download shows at once; the haiku of the day then stays until the next one.
+        // A download for today shows at once, then stays all day.
         const uint32_t version = HaikuOfTheDay::version();
         if (version != triedOfTheDayVersion) {
             triedOfTheDayVersion = version;
-            if (showHaikuOfTheDay())
-                return;
+            showHaikuOfTheDay(day);
         }
-        if (shownOfTheDayVersion != 0)
+        if (shownOfTheDay && shownDay == day)
             return;
     }
-    if (entering || now - lastChange >= STANDBY_HAIKU_INTERVAL_MS)
-        showNextBuiltIn(now);
+    // Built-in haiku of the day: offline, or until today's download arrives (or when it is rejected).
+    if (!shown || shownOfTheDay || shownDay != day)
+        showBuiltIn(day);
 }
 
 void StandbyHaiku::setColor(lv_color_t color) {
@@ -86,19 +85,23 @@ void StandbyHaiku::setColor(lv_color_t color) {
     }
 }
 
-void StandbyHaiku::showNextBuiltIn(unsigned long now) {
-    builtInIndex = (builtInIndex + 1) % BUILT_IN_HAIKU_COUNT;
-    lastChange = now;
-    shownOfTheDayVersion = 0;
-    show(BUILT_IN_HAIKUS[builtInIndex].text, BUILT_IN_HAIKUS[builtInIndex].author);
+void StandbyHaiku::showBuiltIn(long day) {
+    const BuiltInHaiku &haiku = BUILT_IN_HAIKUS[day < 0 ? 0 : day % BUILT_IN_HAIKU_COUNT];
+    shown = true;
+    shownOfTheDay = false;
+    shownDay = day;
+    show(haiku.text, haiku.author);
 }
 
-bool StandbyHaiku::showHaikuOfTheDay() {
-    const uint32_t version = HaikuOfTheDay::version();
+bool StandbyHaiku::showHaikuOfTheDay(long day) {
     HaikuOfTheDayEntry entry;
-    if (!HaikuOfTheDay::get(entry) || !fontCovers(entry.text.c_str()) || !fontCovers(entry.author.c_str()))
-        return false; // keep the built-in haikus rather than draw missing glyphs
-    shownOfTheDayVersion = version;
+    if (!HaikuOfTheDay::get(entry) || entry.day != day)
+        return false; // nothing yet, or yesterday's
+    if (!fontCovers(entry.text.c_str()) || !fontCovers(entry.author.c_str()))
+        return false; // keep the built-in haiku rather than draw missing glyphs
+    shown = true;
+    shownOfTheDay = true;
+    shownDay = day;
     show(entry.text.c_str(), entry.author.c_str());
     return true;
 }

@@ -3,7 +3,7 @@
 
 #include <cstddef>
 
-// Haikus built into the firmware, shown in order (one per standby entry) when the haiku of the day is off or
+// Haikus built into the firmware, one per local day (day modulo the count) when the haiku of the day is off or
 // unavailable. Same works as https://haiku.rubet.fr (github.com/louisrubet/haiku): Japanese originals in the
 // public domain, French translations CC0.
 // One line per verse ('\n'). Characters must be covered by standby_haiku_font_26 / _18 (see fonts/README.md).

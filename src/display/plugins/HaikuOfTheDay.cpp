@@ -5,6 +5,7 @@
 #include <atomic>
 #include <cstdio>
 #include <mutex>
+#include <time.h>
 #include <version.h>
 
 #ifndef GAGGIMATE_SIM
@@ -17,6 +18,7 @@ constexpr size_t MAX_TEXT = 400;
 constexpr size_t MAX_AUTHOR = 80;
 constexpr int MAX_VERSES = 5;
 constexpr int TIMEOUT_MS = 10000;
+constexpr time_t MIN_VALID_TIME = 1700000000; // before this the clock has not been synced yet
 
 std::mutex slotMutex;
 HaikuOfTheDayEntry slot;
@@ -62,6 +64,22 @@ bool getJson(const std::string &url, JsonDocument &doc) {
     return httpGet(url, body) && deserializeJson(doc, body.data(), body.size()) == DeserializationError::Ok;
 }
 } // namespace
+
+long HaikuOfTheDay::today() {
+    const time_t now = time(nullptr);
+    if (now < MIN_VALID_TIME)
+        return -1;
+    tm local{};
+    localtime_r(&now, &local);
+    // Days from civil date (H. Hinnant), valid for the proleptic Gregorian calendar.
+    const long y = local.tm_year + 1900 - (local.tm_mon < 2 ? 1 : 0);
+    const long m = local.tm_mon + 1;
+    const long era = y / 400;
+    const long yoe = y - era * 400;
+    const long doy = (153 * (m + (m > 2 ? -3 : 9)) + 2) / 5 + local.tm_mday - 1;
+    const long doe = yoe * 365 + yoe / 4 - yoe / 100 + doy;
+    return era * 146097 + doe - 719468;
+}
 
 bool HaikuOfTheDay::fetch(long day, HaikuOfTheDayEntry &out) {
     const std::string base = std::string(HAIKU_API_BASE) + HAIKU_LANGUAGE + "/";

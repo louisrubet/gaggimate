@@ -12,7 +12,7 @@ enum class StandbyHaikuDisplay : int { Off = 0, BuiltIn = 1, OfTheDay = 2 };
 // Turns the standby haiku on or off (setting "standbyHaikuActive") and picks its source ("standbyHaikuOnline":
 // haiku of the day from haiku.rubet.fr, else the built-in haikus). The plugin only owns the state; the UI task
 // applies it on "standbyHaiku:display:change", because LVGL must not be touched from the controller task.
-// Online, it downloads the haiku of the day (HaikuOfTheDay.h) once per UTC day, in a short-lived task so
+// Online, it downloads the haiku of the day (HaikuOfTheDay.h) once per local day, in a short-lived task so
 // neither the controller nor the UI task waits on the network.
 class StandbyHaikuPlugin : public Plugin {
   public:

@@ -10,10 +10,8 @@
 
 namespace {
 constexpr const char *LOG_TAG = "StandbyHaiku";
-constexpr time_t MIN_VALID_TIME = 1700000000;            // before this the clock has not been synced yet
 constexpr unsigned long RETRY_MS = 60UL * 60UL * 1000UL; // after a failed download
-constexpr long SECONDS_PER_DAY = 24L * 60L * 60L;
-constexpr uint32_t FETCH_STACK = 8192; // TLS handshake
+constexpr uint32_t FETCH_STACK = 8192;                   // TLS handshake
 } // namespace
 
 void StandbyHaikuPlugin::setup(Controller *controller, PluginManager *pluginManager) {
@@ -45,11 +43,8 @@ void StandbyHaikuPlugin::loop() {
 void StandbyHaikuPlugin::scheduleFetch() {
     if (fetching)
         return;
-    const time_t now = time(nullptr);
-    if (now < MIN_VALID_TIME)
-        return;
-    const long day = static_cast<long>(now / SECONDS_PER_DAY);
-    if (day == fetchedDay)
+    const long day = HaikuOfTheDay::today();
+    if (day < 0 || day == fetchedDay)
         return;
     if (lastFetchFailed && millis() - lastFetchMs < RETRY_MS)
         return;
