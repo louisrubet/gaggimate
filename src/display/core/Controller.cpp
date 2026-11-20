@@ -18,6 +18,7 @@
 #include <display/plugins/AutoWakeupPlugin.h>
 #include <display/plugins/BoilerFillPlugin.h>
 #include <display/plugins/CleaningSchedulePlugin.h>
+#include <display/plugins/LanOtaPlugin.h>
 #include <display/plugins/LedControlPlugin.h>
 #include <display/plugins/SetupWizardPlugin.h>
 #include <display/plugins/ShotHistoryPlugin.h>
@@ -122,6 +123,9 @@ void Controller::setup() {
     }
     pluginManager->registerPlugin(new LedControlPlugin());
     pluginManager->registerPlugin(new AutoWakeupPlugin());
+#ifdef LAN_OTA_PASSWORD_MD5
+    pluginManager->registerPlugin(new LanOtaPlugin()); // development builds only, see docs/lan-ota.md
+#endif
     pluginManager->registerPlugin(new CleaningSchedulePlugin());
     pluginManager->registerPlugin(new SetupWizardPlugin());
     pluginManager->setup(this);
