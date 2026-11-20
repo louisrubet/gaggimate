@@ -1741,6 +1741,10 @@ msgstr "启用智能研磨"
 msgid "Enable standby display"
 msgstr "启用待机显示"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "已启用"
@@ -2285,6 +2289,10 @@ msgstr "研磨目标"
 #: src/pages/Home/utils.js
 msgid "Grinding"
 msgstr "研磨中"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
+msgstr ""
 
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
@@ -5009,6 +5017,7 @@ msgstr "将控制列面板显示为独立卡片，或合并为一张统一卡片
 #: src/pages/Settings/PatchNotes.jsx
 msgid "showing the newest {0}"
 msgstr "显示最新的 {0} 个"
+
 #: src/pages/Statistics/components/StatisticsShotCompareSection.jsx
 msgid "Showing up to 100 latest shots. Refine with filters."
 msgstr "最多显示最近 100 条萃取记录。可使用筛选条件缩小范围。"
@@ -5016,6 +5025,10 @@ msgstr "最多显示最近 100 条萃取记录。可使用筛选条件缩小范�
 #: src/pages/ShotAnalyzer/components/analysisTable/analysisTableModel.js
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "冲煮过程中秤短暂断开连接时显示。此时，即使秤之后重新连接，本次冲煮的停止检测也会忽略重量。"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
@@ -5146,6 +5159,10 @@ msgstr "待机亮度 (0-16)"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "待机亮度超时"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"

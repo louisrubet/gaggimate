@@ -1745,6 +1745,10 @@ msgstr "Attiva Smart Grind"
 msgid "Enable standby display"
 msgstr "Attiva display in standby"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "Attivato"
@@ -2289,6 +2293,10 @@ msgstr "Obiettivo di macinatura"
 #: src/pages/Home/utils.js
 msgid "Grinding"
 msgstr "Macinatura in corso"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
+msgstr ""
 
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
@@ -5013,6 +5021,7 @@ msgstr "Mostra i pannelli della colonna di controllo come schede separate o ragg
 #: src/pages/Settings/PatchNotes.jsx
 msgid "showing the newest {0}"
 msgstr "mostrati i {0} più recenti"
+
 #: src/pages/Statistics/components/StatisticsShotCompareSection.jsx
 msgid "Showing up to 100 latest shots. Refine with filters."
 msgstr "Vengono mostrate fino a 100 estrazioni più recenti. Affina con i filtri."
@@ -5020,6 +5029,10 @@ msgstr "Vengono mostrate fino a 100 estrazioni più recenti. Affina con i filtri
 #: src/pages/ShotAnalyzer/components/analysisTable/analysisTableModel.js
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "Mostrato quando la bilancia perde brevemente la connessione durante l'erogazione. In questo caso il peso viene ignorato per il rilevamento dell'arresto di quell'erogazione, anche se la bilancia si riconnette in seguito."
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
@@ -5150,6 +5163,10 @@ msgstr "Luminosità in standby (0-16)"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "Timeout luminosità standby"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"

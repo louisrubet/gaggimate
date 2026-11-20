@@ -235,6 +235,10 @@ void DefaultUI::init() {
         if (mode >= MODE_STANDBY && mode <= MODE_GRIND)
             changeScreen(screenForMode(mode));
     });
+    pluginManager->on("standbyHaiku:display:change", [this](Event const &event) {
+        standbyHaikuDisplay = event.getInt("value");
+        rerender = true;
+    });
     pluginManager->on("settings:changed", [this](Event const &) {
         if (welcomeActive && controller->getSettings().isSetupDone())
             onWelcomeContinue();
@@ -366,6 +370,8 @@ void DefaultUI::loop() {
         rerender = false;
         lastRender = now;
         applyTheme();
+        standbyHaiku.setDisplay(static_cast<StandbyHaikuDisplay>(standbyHaikuDisplay.load()));
+        standbyHaiku.tick(currentScreen == SCREEN_ID_STANDBY_SCREEN);
         if (controller->isErrorState()) {
             changeScreen(SCREEN_ID_STANDBY_SCREEN);
         }
@@ -582,6 +588,7 @@ void DefaultUI::setupPanel() {
     gaugeSetpointsInside = controller->areGaugeSetpointsInside();
     applyGaugeSetpointStyle(gaugeSetpointsInside);
     setupState();
+    standbyHaiku.setup(objects.standby_screen, objects.obj3, lv_color_hex(theme_colors[eez_flow_get_selected_theme_index()][0]));
     applyTheme();
     // First run boots straight into the welcome screen; it stays until the setup wizard finishes or is skipped
     welcomeActive = !controller->getSettings().isSetupDone();
@@ -1448,6 +1455,7 @@ void DefaultUI::applyTheme() {
         // Via EEZ so its selected index updates too; on-demand screens (new profile) read it when created.
         static const char *const THEME_NAMES[] = {"Dark", "Light", "AmoledDark"};
         eez_flow_set_theme(THEME_NAMES[currentThemeMode]);
+        standbyHaiku.setColor(lv_color_hex(theme_colors[eez_flow_get_selected_theme_index()][0]));
         applyShotChartTheme();
         if (profileChart != nullptr) {
             for (int i = 0; i < 2; i++)

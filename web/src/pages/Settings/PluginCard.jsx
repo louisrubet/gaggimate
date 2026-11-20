@@ -221,6 +221,47 @@ export function PluginCard({
 
       <div className='bg-base-200 rounded-lg p-4'>
         <div className='flex items-center justify-between'>
+          <span className='text-xl font-medium'>
+            <Trans>Standby Haiku</Trans>
+          </span>
+          <input
+            id='standbyHaikuActive'
+            name='standbyHaikuActive'
+            value='standbyHaikuActive'
+            type='checkbox'
+            className='toggle toggle-primary'
+            checked={!!formData.standbyHaikuActive}
+            onChange={onChange('standbyHaikuActive')}
+            aria-label={t`Enable Standby Haiku`}
+          />
+        </div>
+        {formData.standbyHaikuActive && (
+          <div className='border-base-300 mt-4 space-y-4 border-t pt-4'>
+            <p className='text-sm opacity-70'>
+              <Trans>Shows a haiku on the standby screen in place of the GaggiMate logo.</Trans>
+            </p>
+            <div className='flex items-center justify-between gap-4'>
+              <label htmlFor='standbyHaikuOnline' className='text-sm'>
+                <Trans>
+                  Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)
+                </Trans>
+              </label>
+              <input
+                id='standbyHaikuOnline'
+                name='standbyHaikuOnline'
+                value='standbyHaikuOnline'
+                type='checkbox'
+                className='toggle toggle-primary toggle-sm'
+                checked={!!formData.standbyHaikuOnline}
+                onChange={onChange('standbyHaikuOnline')}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className='bg-base-200 rounded-lg p-4'>
+        <div className='flex items-center justify-between'>
           <span className='text-xl font-medium'>HomeKit</span>
           <input
             id='homekit'

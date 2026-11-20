@@ -1741,6 +1741,10 @@ msgstr "Activer Smart Grind"
 msgid "Enable standby display"
 msgstr "Activer l'écran de veille"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr "Activer le haïku en veille"
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "Activé"
@@ -2285,6 +2289,10 @@ msgstr "Cible de mouture"
 #: src/pages/Home/utils.js
 msgid "Grinding"
 msgstr "Mouture en cours"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
+msgstr "Haïku du jour depuis haiku.rubet.fr (connexion internet requise, sinon haïkus intégrés)"
 
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
@@ -5009,6 +5017,7 @@ msgstr "Afficher les panneaux de la colonne de contrôle sous forme de cartes s�
 #: src/pages/Settings/PatchNotes.jsx
 msgid "showing the newest {0}"
 msgstr "affichage des {0} plus récents"
+
 #: src/pages/Statistics/components/StatisticsShotCompareSection.jsx
 msgid "Showing up to 100 latest shots. Refine with filters."
 msgstr "Affichage des 100 shots les plus récents au maximum. Affinez avec les filtres."
@@ -5016,6 +5025,10 @@ msgstr "Affichage des 100 shots les plus récents au maximum. Affinez avec les f
 #: src/pages/ShotAnalyzer/components/analysisTable/analysisTableModel.js
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "Affiché lorsque la balance perd brièvement la connexion pendant l'extraction. Dans ce cas, le poids est ignoré pour la détection d'arrêt de cette extraction, même si la balance se reconnecte ensuite."
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
+msgstr "Affiche un haïku sur l'écran de veille à la place du logo GaggiMate."
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
@@ -5146,6 +5159,10 @@ msgstr "Luminosité en veille (0-16)"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "Délai de luminosité de veille"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr "Haïku en veille"
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"

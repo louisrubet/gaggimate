@@ -678,6 +678,10 @@ void WebUIPlugin::handleSettings(AsyncWebServerRequest *request) const {
                 settings->setSavedScale(request->arg("savedScale"));
             if (request->hasArg("savedScaleName"))
                 settings->setSavedScaleName(request->arg("savedScaleName"));
+            if (request->hasArg("standbyHaikuActive"))
+                settings->setStandbyHaikuActive(parseBoolArg(request->arg("standbyHaikuActive")));
+            if (request->hasArg("standbyHaikuOnline"))
+                settings->setStandbyHaikuOnline(parseBoolArg(request->arg("standbyHaikuOnline")));
             if (request->hasArg("autowakeupEnabled"))
                 settings->setAutoWakeupEnabled(parseBoolArg(request->arg("autowakeupEnabled")));
             if (request->hasArg("autowakeupSchedules")) {
@@ -864,6 +868,8 @@ void WebUIPlugin::handleSettings(AsyncWebServerRequest *request) const {
     doc["altRelayFunction"] = settings.getAltRelayFunction();
     // Add auto-wakeup settings to response
     doc["autowakeupEnabled"] = settings.isAutoWakeupEnabled();
+    doc["standbyHaikuActive"] = settings.isStandbyHaikuActive();
+    doc["standbyHaikuOnline"] = settings.isStandbyHaikuOnline();
     doc["buttonBehavior"] = implode(settings.getButtonBehaviorList(), ",");
     doc["commutationGain"] = settings.getCommutationGain();
     doc["convergenceGain"] = settings.getConvergenceGain();

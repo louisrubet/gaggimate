@@ -366,6 +366,8 @@ class Settings {
     int getFullTankDistance() const { return fullTankDistance.get(); }
     int getAltRelayFunction() const { return altRelayFunction.get(); }
     bool isAutoWakeupEnabled() const { return autowakeupEnabled.get(); }
+    bool isStandbyHaikuActive() const { return standbyHaikuActive.get(); }
+    bool isStandbyHaikuOnline() const { return standbyHaikuOnline.get(); }
     std::vector<AutoWakeupSchedule> getAutoWakeupSchedules() const { return autowakeupSchedules.get(); }
     String getButtonBehavior(int index) const {
         if (index >= 0 && index < buttonBehavior.get().size())
@@ -476,6 +478,8 @@ class Settings {
     void setFullTankDistance(int full_tank_distance);
     void setAltRelayFunction(int alt_relay_function);
     void setAutoWakeupEnabled(bool enabled);
+    void setStandbyHaikuActive(bool active);
+    void setStandbyHaikuOnline(bool online);
     void setAutoWakeupSchedules(const std::vector<AutoWakeupSchedule> &schedules);
     void setButtonBehavior(int index, String behavior);
     void setButtonBehaviorList(const std::vector<String> &behavior_list);
@@ -532,6 +536,8 @@ class Settings {
     Property<bool> delayAdjust{registry, "del_ad", true};
     Property<int> startupMode{registry, "sm", MODE_STANDBY};
     Property<bool> autowakeupEnabled{registry, "ab_en", false};
+    Property<bool> standbyHaikuActive{registry, "shk_a", false};
+    Property<bool> standbyHaikuOnline{registry, "shk_o", false}; // haiku of the day from haiku.rubet.fr
     Property<std::vector<AutoWakeupSchedule>> autowakeupSchedules{registry, "ab_schedules", {AutoWakeupSchedule("07:00")}};
     Property<int> standbyTimeout{registry, "sbt", DEFAULT_STANDBY_TIMEOUT_MS};
     Property<String> pid{registry, "pid", DEFAULT_PID};

@@ -7,6 +7,7 @@
 #include <display/core/constants.h>
 #include <display/drivers/Driver.h>
 #include <display/models/profile.h>
+#include <display/ui/default/StandbyHaiku.h>
 #include <display/ui/default/eez/screens.h>
 #include <display/ui/default/eez/structs.h>
 #include <mutex>
@@ -124,6 +125,8 @@ class DefaultUI {
     static void shotChartZoomAnimCb(void *var, int32_t value);
     static void shotChartDrawCb(lv_event_t *e);
     static void shotChartBackgroundCb(lv_event_t *e);
+    StandbyHaiku standbyHaiku;
+    std::atomic<int> standbyHaikuDisplay{0}; // StandbyHaikuDisplay, set by StandbyHaikuPlugin, applied in loop()
     lv_obj_t *shotChart = nullptr;
     lv_chart_series_t *shotSeries[SHOT_SERIES_COUNT] = {};
     lv_coord_t shotPoints[SHOT_SERIES_COUNT][SHOT_CHART_POINTS] = {};
