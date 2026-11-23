@@ -10,7 +10,8 @@ import { CHECKBOX_KEYS, parseAutoWakeupSchedules } from '../Settings/settingsFor
 export const PLUGIN_KEYS = [
   'autowakeupEnabled',
   'standbyHaikuActive',
-  'standbyHaikuOnline',
+  'standbyHaikuLanguage',
+  'standbyHaikuCalendar',
   'homekit',
   'boilerFillActive',
   'startupFillTime',

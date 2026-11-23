@@ -407,7 +407,9 @@ void Settings::setAutoWakeupEnabled(bool enabled) { autowakeupEnabled.set(enable
 
 void Settings::setStandbyHaikuActive(bool active) { standbyHaikuActive.set(active); }
 
-void Settings::setStandbyHaikuOnline(bool online) { standbyHaikuOnline.set(online); }
+void Settings::setStandbyHaikuLanguage(int language) { standbyHaikuLanguage.set(language); }
+
+void Settings::setStandbyHaikuCalendar(int calendar) { standbyHaikuCalendar.set(calendar); }
 
 void Settings::setAutoWakeupSchedules(const std::vector<AutoWakeupSchedule> &schedules) { autowakeupSchedules.set(schedules); }
 

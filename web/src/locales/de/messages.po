@@ -2290,10 +2290,6 @@ msgstr "Mahlziel"
 msgid "Grinding"
 msgstr "Mahlen"
 
-#: src/pages/Settings/PluginCard.jsx
-msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
-msgstr ""
-
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
 msgstr "Hardware"
@@ -2585,6 +2581,10 @@ msgid "iOS only lets GaggiMate stay connected to your machines while the app is 
 msgstr "iOS erlaubt GaggiMate nur, mit deinen Maschinen verbunden zu bleiben, solange die App geöffnet ist. Benachrichtigungen enden wenige Sekunden, nachdem du zu einer anderen App wechselst oder dein Smartphone sperrst."
 
 #: src/pages/Settings/PluginCard.jsx
+msgid "Japanese calendar (spring from February 4)"
+msgstr ""
+
+#: src/pages/Settings/PluginCard.jsx
 msgid "Keep selected profile"
 msgstr "Ausgewähltes Profil beibehalten"
 
@@ -2597,6 +2597,7 @@ msgid "Kitchen"
 msgstr "Küche"
 
 #: src/components/LanguageSelect.jsx
+#: src/pages/Settings/PluginCard.jsx
 msgid "Language"
 msgstr "Sprache"
 
@@ -2931,6 +2932,10 @@ msgstr "Maximale Pumpenleistung (0 - 1)"
 msgid "MediaRecorder is not supported in this browser."
 msgstr "MediaRecorder wird in diesem Browser nicht unterstützt."
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Meteorological calendar (spring from March 1)"
+msgstr ""
+
 #: src/pages/Statistics/components/PhaseStatistics.jsx
 msgid "Metric"
 msgstr "Metrik"
@@ -3117,6 +3122,10 @@ msgstr "NEU"
 #: src/components/PumpFlowCalibration/usePumpFlowCalibration.js
 msgid "New shot did not appear in history — was it cancelled?"
 msgstr "Neuer Shot ist nicht im Verlauf erschienen – wurde er abgebrochen?"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "New Year haikus from January 1 to 15 in both calendars."
+msgstr ""
 
 #: src/pages/ShotHistory/index.jsx
 msgid "Newest First"
@@ -4671,6 +4680,10 @@ msgstr "Suche"
 msgid "Searching for networks…"
 msgstr "Suche nach Netzwerken…"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Seasons"
+msgstr ""
+
 #: src/pages/ProfileEdit/ExtendedPhase.jsx
 #: src/pages/ProfileEdit/StandardProfileForm.jsx
 #: src/pages/Settings/tabs/GeneralTab.jsx
@@ -5027,7 +5040,7 @@ msgid "Shown when the scale briefly loses connection during the brew. In this ca
 msgstr "Wird angezeigt, wenn die Waage während des Bezugs kurz die Verbindung verliert. In diesem Fall wird das Gewicht für die Stopperkennung dieses Bezugs ignoriert, auch wenn sich die Waage später wieder verbindet."
 
 #: src/pages/Settings/PluginCard.jsx
-msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
+msgid "Shows the haiku of the day from haiku.rubet.fr on the standby screen, in place of the GaggiMate logo. Only haikus of the current season are shown. Without internet, the logo stays."
 msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx

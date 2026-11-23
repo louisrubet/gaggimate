@@ -2290,10 +2290,6 @@ msgstr "Cible de mouture"
 msgid "Grinding"
 msgstr "Mouture en cours"
 
-#: src/pages/Settings/PluginCard.jsx
-msgid "Haiku of the day from haiku.rubet.fr (needs internet, else built-in haikus)"
-msgstr "Haïku du jour depuis haiku.rubet.fr (connexion internet requise, sinon haïkus intégrés)"
-
 #: src/pages/Settings/tabs/SystemTab.jsx
 msgid "Hardware"
 msgstr "Matériel"
@@ -2585,6 +2581,10 @@ msgid "iOS only lets GaggiMate stay connected to your machines while the app is 
 msgstr "iOS ne permet à GaggiMate de rester connecté à vos machines que tant que l'app est ouverte. Les notifications s'arrêtent quelques secondes après être passé à une autre app ou avoir verrouillé votre téléphone."
 
 #: src/pages/Settings/PluginCard.jsx
+msgid "Japanese calendar (spring from February 4)"
+msgstr "Calendrier japonais (printemps dès le 4 février)"
+
+#: src/pages/Settings/PluginCard.jsx
 msgid "Keep selected profile"
 msgstr "Conserver le profil sélectionné"
 
@@ -2597,6 +2597,7 @@ msgid "Kitchen"
 msgstr "Cuisine"
 
 #: src/components/LanguageSelect.jsx
+#: src/pages/Settings/PluginCard.jsx
 msgid "Language"
 msgstr "Langue"
 
@@ -2931,6 +2932,10 @@ msgstr "Puissance max de la pompe (0 - 1)"
 msgid "MediaRecorder is not supported in this browser."
 msgstr "MediaRecorder n'est pas pris en charge dans ce navigateur."
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Meteorological calendar (spring from March 1)"
+msgstr "Calendrier météorologique (printemps dès le 1er mars)"
+
 #: src/pages/Statistics/components/PhaseStatistics.jsx
 msgid "Metric"
 msgstr "Métrique"
@@ -3117,6 +3122,10 @@ msgstr "NEW"
 #: src/components/PumpFlowCalibration/usePumpFlowCalibration.js
 msgid "New shot did not appear in history — was it cancelled?"
 msgstr "Le nouveau shot n'est pas apparu dans l'historique — a-t-il été annulé ?"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "New Year haikus from January 1 to 15 in both calendars."
+msgstr "Haïkus du Nouvel An du 1er au 15 janvier dans les deux calendriers."
 
 #: src/pages/ShotHistory/index.jsx
 msgid "Newest First"
@@ -4671,6 +4680,10 @@ msgstr "Recherche"
 msgid "Searching for networks…"
 msgstr "Recherche des réseaux…"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Seasons"
+msgstr "Saisons"
+
 #: src/pages/ProfileEdit/ExtendedPhase.jsx
 #: src/pages/ProfileEdit/StandardProfileForm.jsx
 #: src/pages/Settings/tabs/GeneralTab.jsx
@@ -5027,8 +5040,8 @@ msgid "Shown when the scale briefly loses connection during the brew. In this ca
 msgstr "Affiché lorsque la balance perd brièvement la connexion pendant l'extraction. Dans ce cas, le poids est ignoré pour la détection d'arrêt de cette extraction, même si la balance se reconnecte ensuite."
 
 #: src/pages/Settings/PluginCard.jsx
-msgid "Shows a haiku on the standby screen in place of the GaggiMate logo."
-msgstr "Affiche un haïku sur l'écran de veille à la place du logo GaggiMate."
+msgid "Shows the haiku of the day from haiku.rubet.fr on the standby screen, in place of the GaggiMate logo. Only haikus of the current season are shown. Without internet, the logo stays."
+msgstr "Affiche le haïku du jour de haiku.rubet.fr sur l'écran de veille, à la place du logo GaggiMate. Seuls les haïkus de la saison en cours sont affichés. Sans internet, le logo reste affiché."
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."

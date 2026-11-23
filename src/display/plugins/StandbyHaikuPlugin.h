@@ -7,13 +7,13 @@
 class Settings;
 
 // What the standby screen shows in place of the GAGGIMATE logo. Value of "standbyHaiku:display:change".
-enum class StandbyHaikuDisplay : int { Off = 0, BuiltIn = 1, OfTheDay = 2 };
+enum class StandbyHaikuDisplay : int { Off = 0, OfTheDay = 2 };
 
-// Turns the standby haiku on or off (setting "standbyHaikuActive") and picks its source ("standbyHaikuOnline":
-// haiku of the day from haiku.rubet.fr, else the built-in haikus). The plugin only owns the state; the UI task
+// Turns the standby haiku on or off (setting "standbyHaikuActive"). The plugin only owns the state; the UI task
 // applies it on "standbyHaiku:display:change", because LVGL must not be touched from the controller task.
-// Online, it downloads the haiku of the day (HaikuOfTheDay.h) once per local day, in a short-lived task so
-// neither the controller nor the UI task waits on the network.
+// When on, it downloads the haiku of the day (HaikuOfTheDay.h) in the chosen language ("standbyHaikuLanguage")
+// from the list of the current season ("standbyHaikuCalendar") once per local day, in a short-lived task so
+// neither the controller nor the UI task waits on the network. Until a download succeeds the logo stays.
 class StandbyHaikuPlugin : public Plugin {
   public:
     void setup(Controller *controller, PluginManager *pluginManager) override;
@@ -21,7 +21,7 @@ class StandbyHaikuPlugin : public Plugin {
 
   private:
     void scheduleFetch();
-    void runFetch(long day);
+    void runFetch();
     static void fetchTask(void *arg);
 
     PluginManager *pluginManager = nullptr;
@@ -29,8 +29,11 @@ class StandbyHaikuPlugin : public Plugin {
     int published = -1; // -1: nothing published yet, so the first loop always publishes the boot state
 
     std::atomic<bool> fetching{false};
-    std::atomic<long> fetchedDay{-1};
+    std::atomic<uint32_t> wantedKey{0};  // HaikuOfTheDay::requestKey() of the current day and settings
+    std::atomic<uint32_t> fetchedKey{0}; // last one downloaded
     std::atomic<long> pendingDay{-1};
+    std::atomic<int> pendingLanguage{0};
+    std::atomic<int> pendingCalendar{0};
     std::atomic<bool> lastFetchFailed{false};
     std::atomic<unsigned long> lastFetchMs{0};
 };

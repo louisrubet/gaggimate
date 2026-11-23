@@ -680,8 +680,10 @@ void WebUIPlugin::handleSettings(AsyncWebServerRequest *request) const {
                 settings->setSavedScaleName(request->arg("savedScaleName"));
             if (request->hasArg("standbyHaikuActive"))
                 settings->setStandbyHaikuActive(parseBoolArg(request->arg("standbyHaikuActive")));
-            if (request->hasArg("standbyHaikuOnline"))
-                settings->setStandbyHaikuOnline(parseBoolArg(request->arg("standbyHaikuOnline")));
+            if (request->hasArg("standbyHaikuLanguage"))
+                settings->setStandbyHaikuLanguage(request->arg("standbyHaikuLanguage").toInt());
+            if (request->hasArg("standbyHaikuCalendar"))
+                settings->setStandbyHaikuCalendar(request->arg("standbyHaikuCalendar").toInt());
             if (request->hasArg("autowakeupEnabled"))
                 settings->setAutoWakeupEnabled(parseBoolArg(request->arg("autowakeupEnabled")));
             if (request->hasArg("autowakeupSchedules")) {
@@ -869,7 +871,8 @@ void WebUIPlugin::handleSettings(AsyncWebServerRequest *request) const {
     // Add auto-wakeup settings to response
     doc["autowakeupEnabled"] = settings.isAutoWakeupEnabled();
     doc["standbyHaikuActive"] = settings.isStandbyHaikuActive();
-    doc["standbyHaikuOnline"] = settings.isStandbyHaikuOnline();
+    doc["standbyHaikuLanguage"] = settings.getStandbyHaikuLanguage();
+    doc["standbyHaikuCalendar"] = settings.getStandbyHaikuCalendar();
     doc["buttonBehavior"] = implode(settings.getButtonBehaviorList(), ",");
     doc["commutationGain"] = settings.getCommutationGain();
     doc["convergenceGain"] = settings.getConvergenceGain();

@@ -18,7 +18,6 @@ export const CHECKBOX_KEYS = [
   'clock24hFormat',
   'autowakeupEnabled',
   'standbyHaikuActive',
-  'standbyHaikuOnline',
   'smartGrindToggle',
 ];
 
