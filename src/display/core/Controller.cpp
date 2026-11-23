@@ -24,6 +24,7 @@
 #include <display/plugins/ShotHistoryPlugin.h>
 #include <display/plugins/SmartDosePlugin.h>
 #include <display/plugins/SmartGrindPlugin.h>
+#include <display/plugins/StandbyHaikuPlugin.h>
 #include <display/plugins/WebUIPlugin.h>
 #include <display/plugins/mahlkonig/MahlkonigPlugin.h>
 #include <display/util/FsUtil.h>
@@ -126,6 +127,7 @@ void Controller::setup() {
 #ifdef LAN_OTA_PASSWORD_MD5
     pluginManager->registerPlugin(new LanOtaPlugin()); // development builds only, see docs/lan-ota.md
 #endif
+    pluginManager->registerPlugin(new StandbyHaikuPlugin());
     pluginManager->registerPlugin(new CleaningSchedulePlugin());
     pluginManager->registerPlugin(new SetupWizardPlugin());
     pluginManager->setup(this);

@@ -1741,6 +1741,10 @@ msgstr "スマートグラインドを有効にする"
 msgid "Enable standby display"
 msgstr "スタンバイ画面を有効にする"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "有効"
@@ -2577,6 +2581,10 @@ msgid "iOS only lets GaggiMate stay connected to your machines while the app is 
 msgstr "iOS では、アプリを開いている間しか GaggiMate がマシンとの接続を維持できません。別のアプリに切り替えたりスマートフォンをロックしたりすると、数秒後に通知が停止します。"
 
 #: src/pages/Settings/PluginCard.jsx
+msgid "Japanese calendar (spring from February 4)"
+msgstr ""
+
+#: src/pages/Settings/PluginCard.jsx
 msgid "Keep selected profile"
 msgstr "選択中のプロファイルを維持"
 
@@ -2589,6 +2597,7 @@ msgid "Kitchen"
 msgstr "キッチン"
 
 #: src/components/LanguageSelect.jsx
+#: src/pages/Settings/PluginCard.jsx
 msgid "Language"
 msgstr "言語"
 
@@ -2923,6 +2932,10 @@ msgstr "最大ポンプ出力（0 - 1）"
 msgid "MediaRecorder is not supported in this browser."
 msgstr "このブラウザーは MediaRecorder に対応していません。"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Meteorological calendar (spring from March 1)"
+msgstr ""
+
 #: src/pages/Statistics/components/PhaseStatistics.jsx
 msgid "Metric"
 msgstr "メトリクス"
@@ -3109,6 +3122,10 @@ msgstr "NEW"
 #: src/components/PumpFlowCalibration/usePumpFlowCalibration.js
 msgid "New shot did not appear in history — was it cancelled?"
 msgstr "新しいショットが履歴に表示されませんでした。キャンセルされましたか？"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "New Year haikus from January 1 to 15 in both calendars."
+msgstr ""
 
 #: src/pages/ShotHistory/index.jsx
 msgid "Newest First"
@@ -4663,6 +4680,10 @@ msgstr "検索中"
 msgid "Searching for networks…"
 msgstr "ネットワークを検索中…"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Seasons"
+msgstr ""
+
 #: src/pages/ProfileEdit/ExtendedPhase.jsx
 #: src/pages/ProfileEdit/StandardProfileForm.jsx
 #: src/pages/Settings/tabs/GeneralTab.jsx
@@ -5018,6 +5039,10 @@ msgstr "最新のショットを最大100件表示しています。フィルタ
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "抽出中にスケールの接続が一時的に途切れたときに表示されます。この場合、後でスケールが再接続しても、その抽出では停止判定に重量が使われません。"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows the haiku of the day from haiku.rubet.fr on the standby screen, in place of the GaggiMate logo. Only haikus of the current season are shown. Without internet, the logo stays."
+msgstr ""
+
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
 msgstr "滴下や制御の遅延を考慮して、流量に基づき早めにプロセスを停止します。"
@@ -5147,6 +5172,10 @@ msgstr "スタンバイ時の輝度（0-16）"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "スタンバイ輝度のタイムアウト"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"

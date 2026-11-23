@@ -9,6 +9,9 @@ import { CHECKBOX_KEYS, parseAutoWakeupSchedules } from '../Settings/settingsFor
 // Everything PluginCard edits; only these are POSTed from the wizard.
 export const PLUGIN_KEYS = [
   'autowakeupEnabled',
+  'standbyHaikuActive',
+  'standbyHaikuLanguage',
+  'standbyHaikuCalendar',
   'homekit',
   'boilerFillActive',
   'startupFillTime',

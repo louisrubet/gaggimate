@@ -17,6 +17,7 @@ export const CHECKBOX_KEYS = [
   'delayAdjust',
   'clock24hFormat',
   'autowakeupEnabled',
+  'standbyHaikuActive',
   'smartGrindToggle',
 ];
 

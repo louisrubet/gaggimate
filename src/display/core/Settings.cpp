@@ -405,6 +405,12 @@ void Settings::setAltRelayFunction(int alt_relay_function) { altRelayFunction.se
 
 void Settings::setAutoWakeupEnabled(bool enabled) { autowakeupEnabled.set(enabled); }
 
+void Settings::setStandbyHaikuActive(bool active) { standbyHaikuActive.set(active); }
+
+void Settings::setStandbyHaikuLanguage(int language) { standbyHaikuLanguage.set(language); }
+
+void Settings::setStandbyHaikuCalendar(int calendar) { standbyHaikuCalendar.set(calendar); }
+
 void Settings::setAutoWakeupSchedules(const std::vector<AutoWakeupSchedule> &schedules) { autowakeupSchedules.set(schedules); }
 
 void Settings::setButtonBehavior(int index, String behavior) {

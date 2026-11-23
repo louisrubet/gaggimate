@@ -221,6 +221,80 @@ export function PluginCard({
 
       <div className='bg-base-200 rounded-lg p-4'>
         <div className='flex items-center justify-between'>
+          <span className='text-xl font-medium'>
+            <Trans>Standby Haiku</Trans>
+          </span>
+          <input
+            id='standbyHaikuActive'
+            name='standbyHaikuActive'
+            value='standbyHaikuActive'
+            type='checkbox'
+            className='toggle toggle-primary'
+            checked={!!formData.standbyHaikuActive}
+            onChange={onChange('standbyHaikuActive')}
+            aria-label={t`Enable Standby Haiku`}
+          />
+        </div>
+        {formData.standbyHaikuActive && (
+          <div className='border-base-300 mt-4 space-y-4 border-t pt-4'>
+            <p className='text-sm opacity-70'>
+              <Trans>
+                Shows the haiku of the day from haiku.rubet.fr on the standby screen, in place of
+                the GaggiMate logo. Only haikus of the current season are shown. Without internet,
+                the logo stays.
+              </Trans>
+            </p>
+            <div className='form-control'>
+              <label htmlFor='standbyHaikuLanguage' className='mb-2 block text-sm font-medium'>
+                <Trans>Language</Trans>
+              </label>
+              <select
+                id='standbyHaikuLanguage'
+                name='standbyHaikuLanguage'
+                className='select select-bordered w-full'
+                onChange={onChange('standbyHaikuLanguage')}
+              >
+                <option
+                  value='0'
+                  selected={(formData.standbyHaikuLanguage ?? 0).toString() === '0'}
+                >
+                  Français
+                </option>
+                <option value='1' selected={formData.standbyHaikuLanguage?.toString() === '1'}>
+                  English
+                </option>
+              </select>
+            </div>
+            <div className='form-control'>
+              <label htmlFor='standbyHaikuCalendar' className='mb-2 block text-sm font-medium'>
+                <Trans>Seasons</Trans>
+              </label>
+              <select
+                id='standbyHaikuCalendar'
+                name='standbyHaikuCalendar'
+                className='select select-bordered w-full'
+                onChange={onChange('standbyHaikuCalendar')}
+              >
+                <option
+                  value='0'
+                  selected={(formData.standbyHaikuCalendar ?? 0).toString() === '0'}
+                >
+                  {t`Japanese calendar (spring from February 4)`}
+                </option>
+                <option value='1' selected={formData.standbyHaikuCalendar?.toString() === '1'}>
+                  {t`Meteorological calendar (spring from March 1)`}
+                </option>
+              </select>
+              <p className='mt-2 text-xs opacity-70'>
+                <Trans>New Year haikus from January 1 to 15 in both calendars.</Trans>
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className='bg-base-200 rounded-lg p-4'>
+        <div className='flex items-center justify-between'>
           <span className='text-xl font-medium'>HomeKit</span>
           <input
             id='homekit'

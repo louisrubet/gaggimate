@@ -1741,6 +1741,10 @@ msgstr "启用智能研磨"
 msgid "Enable standby display"
 msgstr "启用待机显示"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "已启用"
@@ -2577,6 +2581,10 @@ msgid "iOS only lets GaggiMate stay connected to your machines while the app is 
 msgstr "iOS 仅允许 GaggiMate 在应用打开时与咖啡机保持连接。切换到其他应用或锁屏几秒后，通知将停止。"
 
 #: src/pages/Settings/PluginCard.jsx
+msgid "Japanese calendar (spring from February 4)"
+msgstr ""
+
+#: src/pages/Settings/PluginCard.jsx
 msgid "Keep selected profile"
 msgstr "保持所选曲线"
 
@@ -2589,6 +2597,7 @@ msgid "Kitchen"
 msgstr "厨房"
 
 #: src/components/LanguageSelect.jsx
+#: src/pages/Settings/PluginCard.jsx
 msgid "Language"
 msgstr "语言"
 
@@ -2923,6 +2932,10 @@ msgstr "最大泵功率 (0 - 1)"
 msgid "MediaRecorder is not supported in this browser."
 msgstr "此浏览器不支持 MediaRecorder。"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Meteorological calendar (spring from March 1)"
+msgstr ""
+
 #: src/pages/Statistics/components/PhaseStatistics.jsx
 msgid "Metric"
 msgstr "指标"
@@ -3109,6 +3122,10 @@ msgstr "NEW"
 #: src/components/PumpFlowCalibration/usePumpFlowCalibration.js
 msgid "New shot did not appear in history — was it cancelled?"
 msgstr "新的萃取未出现在历史记录中 — 是否已取消？"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "New Year haikus from January 1 to 15 in both calendars."
+msgstr ""
 
 #: src/pages/ShotHistory/index.jsx
 msgid "Newest First"
@@ -4663,6 +4680,10 @@ msgstr "搜索中"
 msgid "Searching for networks…"
 msgstr "正在搜索网络…"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Seasons"
+msgstr ""
+
 #: src/pages/ProfileEdit/ExtendedPhase.jsx
 #: src/pages/ProfileEdit/StandardProfileForm.jsx
 #: src/pages/Settings/tabs/GeneralTab.jsx
@@ -5009,6 +5030,7 @@ msgstr "将控制列面板显示为独立卡片，或合并为一张统一卡片
 #: src/pages/Settings/PatchNotes.jsx
 msgid "showing the newest {0}"
 msgstr "显示最新的 {0} 个"
+
 #: src/pages/Statistics/components/StatisticsShotCompareSection.jsx
 msgid "Showing up to 100 latest shots. Refine with filters."
 msgstr "最多显示最近 100 条萃取记录。可使用筛选条件缩小范围。"
@@ -5016,6 +5038,10 @@ msgstr "最多显示最近 100 条萃取记录。可使用筛选条件缩小范�
 #: src/pages/ShotAnalyzer/components/analysisTable/analysisTableModel.js
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "冲煮过程中秤短暂断开连接时显示。此时，即使秤之后重新连接，本次冲煮的停止检测也会忽略重量。"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows the haiku of the day from haiku.rubet.fr on the standby screen, in place of the GaggiMate logo. Only haikus of the current season are shown. Without internet, the logo stays."
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
@@ -5146,6 +5172,10 @@ msgstr "待机亮度 (0-16)"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "待机亮度超时"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"

@@ -1741,6 +1741,10 @@ msgstr "Activar Smart Grind"
 msgid "Enable standby display"
 msgstr "Activar pantalla en reposo"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Enable Standby Haiku"
+msgstr ""
+
 #: src/components/MachineProfileControl.jsx
 msgid "Enabled"
 msgstr "Activado"
@@ -2577,6 +2581,10 @@ msgid "iOS only lets GaggiMate stay connected to your machines while the app is 
 msgstr "iOS solo permite que GaggiMate siga conectado a tus máquinas mientras la app está abierta. Las notificaciones se detienen unos segundos después de cambiar a otra app o bloquear el teléfono."
 
 #: src/pages/Settings/PluginCard.jsx
+msgid "Japanese calendar (spring from February 4)"
+msgstr ""
+
+#: src/pages/Settings/PluginCard.jsx
 msgid "Keep selected profile"
 msgstr "Mantener el perfil seleccionado"
 
@@ -2589,6 +2597,7 @@ msgid "Kitchen"
 msgstr "Cocina"
 
 #: src/components/LanguageSelect.jsx
+#: src/pages/Settings/PluginCard.jsx
 msgid "Language"
 msgstr "Idioma"
 
@@ -2923,6 +2932,10 @@ msgstr "Potencia máxima de la bomba (0 - 1)"
 msgid "MediaRecorder is not supported in this browser."
 msgstr "MediaRecorder no es compatible con este navegador."
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Meteorological calendar (spring from March 1)"
+msgstr ""
+
 #: src/pages/Statistics/components/PhaseStatistics.jsx
 msgid "Metric"
 msgstr "Métrica"
@@ -3109,6 +3122,10 @@ msgstr "NEW"
 #: src/components/PumpFlowCalibration/usePumpFlowCalibration.js
 msgid "New shot did not appear in history — was it cancelled?"
 msgstr "La nueva extracción no apareció en el historial: ¿se canceló?"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "New Year haikus from January 1 to 15 in both calendars."
+msgstr ""
 
 #: src/pages/ShotHistory/index.jsx
 msgid "Newest First"
@@ -4663,6 +4680,10 @@ msgstr "Buscando"
 msgid "Searching for networks…"
 msgstr "Buscando redes…"
 
+#: src/pages/Settings/PluginCard.jsx
+msgid "Seasons"
+msgstr ""
+
 #: src/pages/ProfileEdit/ExtendedPhase.jsx
 #: src/pages/ProfileEdit/StandardProfileForm.jsx
 #: src/pages/Settings/tabs/GeneralTab.jsx
@@ -5009,6 +5030,7 @@ msgstr "Muestra los paneles de la columna de control como tarjetas separadas o a
 #: src/pages/Settings/PatchNotes.jsx
 msgid "showing the newest {0}"
 msgstr "se muestran los {0} más recientes"
+
 #: src/pages/Statistics/components/StatisticsShotCompareSection.jsx
 msgid "Showing up to 100 latest shots. Refine with filters."
 msgstr "Se muestran hasta las 100 extracciones más recientes. Afina con los filtros."
@@ -5016,6 +5038,10 @@ msgstr "Se muestran hasta las 100 extracciones más recientes. Afina con los fil
 #: src/pages/ShotAnalyzer/components/analysisTable/analysisTableModel.js
 msgid "Shown when the scale briefly loses connection during the brew. In this case, weight is ignored for stop detection for that brew, even if the scale reconnects later."
 msgstr "Se muestra cuando la báscula pierde brevemente la conexión durante la extracción. En ese caso, el peso se ignora para la detección de parada en esa extracción, aunque la báscula se reconecte después."
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Shows the haiku of the day from haiku.rubet.fr on the standby screen, in place of the GaggiMate logo. Only haikus of the current season are shown. Without internet, the logo stays."
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Shuts off the process ahead of time based on the flow rate to account for any dripping or delays in the control."
@@ -5146,6 +5172,10 @@ msgstr "Brillo en reposo (0-16)"
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Brightness Timeout"
 msgstr "Tiempo para brillo de reposo"
+
+#: src/pages/Settings/PluginCard.jsx
+msgid "Standby Haiku"
+msgstr ""
 
 #: src/pages/Settings/tabs/GeneralTab.jsx
 msgid "Standby Timeout"
